@@ -55,12 +55,15 @@ public class ReportUtil implements Serializable{
 	private static final int RELATORIO_PLANILHA_OPEN_OFFICE = 4;
 	private StreamedContent arquivoRetono = null; //retorno pra web
 	private String caminhoArquivoRelatorio = null;
+	
+	@SuppressWarnings("rawtypes")
 	private JRExporter tipoArquivoExportado = null; // Do jasper -> para gerar relatorios
 	private String extensaoArquivoExportado = "";
 	private String caminhoSubreport_dir = "";
 	private File arquivoGerado = null;
 	
 	//metodo que gera relatorio, recebe uma lista generica. servindo para todos os relatorios
+	@SuppressWarnings({ "rawtypes", "unchecked" })
 	public StreamedContent geraRelatorio(List<?> listDataBeanColletionReport,
 			HashMap parametrosRelatorio, String nomeRelatorioJasper,
 			String nomeRelatorioSaida, int tipoRelatorio) throws Exception {

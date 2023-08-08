@@ -39,6 +39,7 @@
 		<mapping class="br.com.project.model.classes.ValorComissaoFuncionarioFilial" /> 
 		<mapping class="br.com.project.model.classes.InformacaoRevisao" />
 		<mapping class="br.com.project.model.classes.SendEmail" />
+		
 
 		<listener class="org.hibernate.envers.event.AuditEventListener"
 			type="post-insert" />
